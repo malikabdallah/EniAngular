@@ -1,0 +1,73 @@
+
+<h1>Utilise les pipes</h1>
+<p>dans une application il n est pas rare d effectue une transformation d un element avant de l afficher
+    l example le plus courrant est celui de la date
+    en javascript la date a un format complexe alors queon veut plutot l information
+    de la façon suivante 10/06/2020 le pipe est un element qui va gerer ses transformation
+</p>
+
+
+<p>
+    pour utiliser un pipe il faut utiliser l operateur (|) dans l example ci dessous le pipe utiliser est la date
+    today | date
+</p>
+
+<p>nous sommes le {{today | date }}</p>
+
+par defaut angular va utiliser le format americain , pour specifier le format a appliquer il faut 
+passer des parametres au pipes . les parametres se places directement
+deriere le nom du pipe separer par un (:) donc cela donnera date:"MM/dd/yyyy"
+
+
+<p>nous sommes le {{today | date:"MM/dd/yyyy"}}</p>
+
+<h2>les pipes du framework</h2>
+Angular met a disposition plusieurs pipes ,
+<ul>
+    <li>le pipe date met en forme une date</li>
+    <li>le pipe async prend en entre une promise ou un observable est en affiche le resultat</li>
+    <li>uppercase ou lowercase </li>
+    <li>json transforme l element en json</li>
+    <li>currency : affiche les nombres dans un format monaitaire prend en param la monai a utiliser</li>
+</ul> 
+
+
+<h2>creer un pipe</h2>
+
+pour creer son propre pipe , il faut creer une classe qui implement interface pipeTransform , 
+elle contient une seul methode avec la signature transform(value:any, ... args:any[]):any il faut implementer
+
+le premier param est la valeur sur laquelle est appliquer l operateur pipe | , les suivant sont ceux passe
+en parametre lors de l appel au pipe le retour de cette methode est le resultat du pipe
+on peut ajouter le pipe directement dans le composant
+pipes: [pipes]
+
+<p>{{name | greeting:true}}</p>
+
+on peut retourner n importe quelle type dans le pipes
+les pipes peuvent etre utiliser autrement que pour la transformation , on peut par example effectuer un filtre
+avec un pipe il faut par example que le pipe retourne un tableau associer avec ngFor
+
+<p *ngFor="let personne of personnes | isMale">
+    {{personne.name}}
+</p>
+
+<br/>
+un pipe impur se reexecute a chaque changement  et un pur ne se reexecutera pas lors de l ajoute
+les purs sont plus performant et doivent etre privilegie en utilisant  une seconde properiete qui sera binder
+
+<h2>les modules
+</h2>
+
+permet d organiser une application en bloc fonctionel et est le point d entree d une application angular
+il faut le decoré avec avec @NgModule
+
+import : importer des modules afin d utiliser les elements de ces modules dans le module courrant<br/>
+declaractions : defini les elements embarques (composant , directives , pipes etc)<br/>
+bootstrap: le composant racine de l application<br/>
+providers: definit les elements qui seront injectables dans tous les composants du module<br/>
+module routing pour isoler code metier des declaractions de routes 
+
+
+
+

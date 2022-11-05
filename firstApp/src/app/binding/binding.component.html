@@ -1,0 +1,97 @@
+<h2>interpolation</h2>
+<p>la declarration d un binding se fait dans la vue via double accolade </p>
+<p>l interpolation permet d inject du contenue dans la vue , one way binding du composant vers la vue 
+    si la valeur du composant est mise a jour la vue sera mise a jour mais l inverse n est pas vrai
+</p>
+<pre>
+    <code>{{code}}</code>
+ </pre>
+{{listName}}
+<br/>
+
+<h2>attribut binding</h2>
+il est possible de rendre le contenu d un attribut html dynamique en profitant du binding 
+pour cela il faut l entoure de crocher []
+<p><code>image <img [src]='url'/></code> </p>
+
+<br/>
+<button [disabled]="!isDirty">save</button>
+<button (click)="change()">able or disable</button>
+<br/>
+
+
+<h2>evenement en javascript</h2>
+angular permet de reagir au evenemnt javascript declenche depuis la vue et notifie le composanton parle de 
+event binding
+pour cela (evenemntjavascript)="methode()"
+
+  <form (submit)="createTodo()">
+    <input type="text" name="todoLabel" [(ngModel)]="todo"/>
+    <button type="submit">submit</button>
+  </form>
+  <p>il y a {{todos.length}} todo</p>
+<pre>
+    <code>(event) </code>
+</pre>
+<h2>two way data binding</h2>
+<p>accolade crochet banane dans boite</p>
+<input type="text" name='todoLabel' [placeholder]="newTodo" [(ngModel)]="newTodo"/>
+<button (click)="changeTwo()">able or disable</button>
+
+
+<h2>liste</h2>
+les templates angulr permettent d iterer sur des collections de composant
+et de definir comment elle sera affiche via la directive *ngFor
+<br/> la balise html avec la directive soncontenusera duplique , chaque duplication sera 
+contextualise avec l element sur lequel onitera <br/>
+on itere sur la collection todos ,pour chaque iteration le noeud li sera dupliqué
+ la directive fournit aussi des infos sur l element iterer
+ <br/>
+ first , last , index  etc let i = index
+<br/>
+ngFor a un biding bidirectionnelle
+<br/>
+
+<ul>
+    <li *ngFor='let todo of todos;let i=index'>
+        {{i}}:{{todo}}
+    </li>
+</ul>
+<button (click)="changeThree()">ajout</button>
+
+
+<h2>cacher ou afficher un element</h2>
+
+on peut utiliser l attribut html [hidden] en renseignant une expresion egal a true
+[hidden]='todo.length'
+ngIf='todo.length>0'
+
+<h2>liens dynamique</h2>
+[href]='"http://google.fr/#q="+todo' ou <br/>
+href='http://google.fr/#q={{todo}}'
+
+<h2>style</h2>
+
+
+
+
+<h2>directives</h2>
+une directive est un element du framework qui va interragir avec le dom de la page
+il y a trois types de directives
+
+-les directives d attribut qui vont modifier l element html associer comme par example ngClass
+
+-les directives structurelle  comme ngFor
+-le dernier type de directive est les composant 
+
+
+<h2>les decoracteur</h2>
+
+ils permettent de decrire au framework comment interpreter un element
+<br/>
+decoracteur @Component pour indique class interpreter comme composants
+sans lui la classe sera considerer comme une classe typescript , permet de separer lapartier metier
+des info technique
+<br/>
+il y a beaucoup de decorateur
+@Input , @Inject , @Injectable , @ViewChild
