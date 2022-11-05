@@ -1,0 +1,5 @@
+<app-enfant (eventMessage)="enregistrerMessage($event)" (eventPoke)="enregistrerPoke()"></app-enfant>
+
+<ul >
+    <li *ngFor="let message of messages">{{message}}</li>
+</ul>
