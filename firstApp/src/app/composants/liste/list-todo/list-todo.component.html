@@ -1,0 +1,11 @@
+<div>
+    <input placeholder="nouveau todo" [(ngModel)]="newTodoText"/>
+    <button (click)="addTodo()">ajouter todo</button>
+    <p>taille {{todoList.length}}</p>
+    <br/>
+    <div *ngFor="let todo of todoList">
+        <app-todo  [todo]="todo" (deleteTrigger)="delete($event)"></app-todo>
+        <button (click)="delete(todo)">supprimer</button>
+    </div>
+    
+</div>

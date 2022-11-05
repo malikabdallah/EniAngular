@@ -9,6 +9,10 @@ import { BindingComponent } from './binding/binding.component';
 import { PipesComponent } from './pipes/pipes.component';
 import { GreetingPipe } from './pipes/greeting.pipe';
 import { IsMalePipe } from './pipes/is-male.pipe';
+import { ItemComponent } from './composants/item/item.component';
+import { ListitemComponent } from './composants/listitem/listitem.component';
+import { ListTodoComponent } from './composants/liste/list-todo/list-todo.component';
+import { TodoComponent } from './composants/liste/todo/todo.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +20,11 @@ import { IsMalePipe } from './pipes/is-male.pipe';
     BindingComponent,
     PipesComponent,
     GreetingPipe,
-    IsMalePipe
+    IsMalePipe,
+    ItemComponent,
+    ListitemComponent,
+    ListTodoComponent,
+    TodoComponent
   ],
   imports: [
     BrowserModule,
