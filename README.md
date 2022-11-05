@@ -82,6 +82,8 @@ approutingmodule
 
 ### promises observable callback
 
+### ecma 6 
+
 
 # 3)les fondamentaux
 
