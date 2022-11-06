@@ -16,6 +16,10 @@ import { GreetingPipe } from './pipes/greeting.pipe';
 import { IsMalePipe } from './pipes/is-male.pipe';
 import { ParentComponent } from './composants/output/parent/parent.component';
 import { EnfantComponent } from './composants/output/enfant/enfant.component';
+import { ViewenfantComponent } from './composants/manipulationenfant/viewenfant/viewenfant.component';
+import { ViewparentComponent } from './composants/manipulationenfant/viewparent/viewparent.component';
+import { NumberComponent } from './services/number/number.component';
+import { CompteurComponent } from './eventbinding/compteur/compteur.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +33,11 @@ import { EnfantComponent } from './composants/output/enfant/enfant.component';
     ListTodoComponent,
     TodoComponent,
     ParentComponent,
-    EnfantComponent
+    EnfantComponent,
+    ViewenfantComponent,
+    ViewparentComponent,
+    NumberComponent,
+    CompteurComponent
   ],
   imports: [
     BrowserModule,

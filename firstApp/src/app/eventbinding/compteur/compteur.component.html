@@ -1,0 +1,21 @@
+<button (click)="incrementer()">incrementation</button>
+<p>nombre click:{{cpt}}</p>
+
+<hr/>
+<input (keyup)="enregistre($event)" type="text"/>
+<br/>
+<p>keys:{{keys}}</p>
+
+<hr/>
+template reference local 
+<br/>
+<input type="text" #input (keyup)="0"/>
+<br/>
+{{input.value}}
+
+<hr/>
+template reference local avec event
+<br/>
+<input type="text" #myinput (keyup)="localEvent(myinput.value)"/>
+<br/>
+{{valeur}}
