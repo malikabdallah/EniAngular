@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -20,6 +20,8 @@ import { ViewenfantComponent } from './composants/manipulationenfant/viewenfant/
 import { ViewparentComponent } from './composants/manipulationenfant/viewparent/viewparent.component';
 import { NumberComponent } from './services/number/number.component';
 import { CompteurComponent } from './eventbinding/compteur/compteur.component';
+import { ProductFormComponent } from './formulaire/product-form/product-form.component';
+import { ReactiveComponent } from './formulaire/reactive/reactive.component';
 
 @NgModule({
   declarations: [
@@ -37,12 +39,15 @@ import { CompteurComponent } from './eventbinding/compteur/compteur.component';
     ViewenfantComponent,
     ViewparentComponent,
     NumberComponent,
-    CompteurComponent
+    CompteurComponent,
+    ProductFormComponent,
+    ReactiveComponent
   ],
   imports: [
     BrowserModule,
     CommonModule,
     FormsModule,
+    ReactiveFormsModule,
     AppRoutingModule
   ],
   providers: [],

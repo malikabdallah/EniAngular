@@ -7,6 +7,8 @@ import { ListitemComponent } from './composants/listitem/listitem.component';
 import { ViewparentComponent } from './composants/manipulationenfant/viewparent/viewparent.component';
 import { ParentComponent } from './composants/output/parent/parent.component';
 import { CompteurComponent } from './eventbinding/compteur/compteur.component';
+import { ProductFormComponent } from './formulaire/product-form/product-form.component';
+import { ReactiveComponent } from './formulaire/reactive/reactive.component';
 import { PipesComponent } from './pipes/pipes.component';
 import { NumberComponent } from './services/number/number.component';
 
@@ -18,7 +20,9 @@ const routes: Routes = [
   { path: 'composant/output',component:ParentComponent},
   { path: 'composant/view',component:ViewparentComponent},
   { path: 'service',component:NumberComponent},
-  { path: 'event/increment',component:CompteurComponent}
+  { path: 'event/increment',component:CompteurComponent},
+  { path: 'formulaire/template', component:ProductFormComponent},
+  { path: 'formulaire/reactive', component:ReactiveComponent}
 ];
 
 @NgModule({

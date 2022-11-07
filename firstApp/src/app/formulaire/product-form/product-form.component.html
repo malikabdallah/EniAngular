@@ -1,0 +1,17 @@
+<div>
+    <h1>formulaire</h1>
+    <form (ngSubmit)="onSubmit()" #form="ngForm">
+        <div>
+            <label for="name">name</label>
+            <input type="text" id="name" name="name" required [(ngModel)]="product.name" #template>
+            <div>{{template.className}}</div>
+        </div>
+        <div>
+            <label for="category">categorie</label>
+            <select id="category" name="categorie" required [(ngModel)]="product.category">
+                <option *ngFor="let categorie of categories" [value]="categorie">{{categorie}}</option>
+            </select>
+        </div>
+        <button type="submit" [disabled]="!form.form.valid" >submit</button>
+    </form>
+</div>
