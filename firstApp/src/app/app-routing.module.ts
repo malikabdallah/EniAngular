@@ -10,6 +10,8 @@ import { CompteurComponent } from './eventbinding/compteur/compteur.component';
 import { ProductFormComponent } from './formulaire/product-form/product-form.component';
 import { ReactiveComponent } from './formulaire/reactive/reactive.component';
 import { PipesComponent } from './pipes/pipes.component';
+import { PommesdetailComponent } from './routage/pommesdetail/pommesdetail.component';
+import { PommeslistComponent } from './routage/pommeslist/pommeslist.component';
 import { NumberComponent } from './services/number/number.component';
 
 const routes: Routes = [
@@ -22,7 +24,11 @@ const routes: Routes = [
   { path: 'service',component:NumberComponent},
   { path: 'event/increment',component:CompteurComponent},
   { path: 'formulaire/template', component:ProductFormComponent},
-  { path: 'formulaire/reactive', component:ReactiveComponent}
+  { path: 'formulaire/reactive', component:ReactiveComponent},
+  { path: 'routing/pommes/detail/:id',component:PommesdetailComponent},
+  { path: 'routing/pommes', component:PommeslistComponent},
+  { path: 'routing/pommes/:page',component:PommeslistComponent}
+
 ];
 
 @NgModule({

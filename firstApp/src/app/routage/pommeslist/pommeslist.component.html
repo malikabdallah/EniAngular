@@ -1,0 +1,11 @@
+<ul>
+    <li *ngFor="let pomme of pommes">
+        <a [routerLink]="['/routing/pommes/detail',pomme.id]">{{pomme.id}}:{{pomme.nom}}</a>
+    </li>
+</ul>
+<button [disabled]="page==0" [routerLink]="['/routing/pommes',page-1]" >precedente</button><button [disabled]="!hasNext" [routerLink]="['/routing/pommes',page+1]">next</button>
+
+<br/>
+<a [routerLink]="['/routing/pommes/detail/0']">0</a><br/>
+<a [routerLink]="['/routing/pommes/detail',0]">0</a><br/>
+<a [routerLink]="['routing/pommes/detail',0]">0</a><br/>

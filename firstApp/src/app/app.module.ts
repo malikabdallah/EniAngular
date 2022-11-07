@@ -22,6 +22,8 @@ import { NumberComponent } from './services/number/number.component';
 import { CompteurComponent } from './eventbinding/compteur/compteur.component';
 import { ProductFormComponent } from './formulaire/product-form/product-form.component';
 import { ReactiveComponent } from './formulaire/reactive/reactive.component';
+import { PommesdetailComponent } from './routage/pommesdetail/pommesdetail.component';
+import { PommeslistComponent } from './routage/pommeslist/pommeslist.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +43,9 @@ import { ReactiveComponent } from './formulaire/reactive/reactive.component';
     NumberComponent,
     CompteurComponent,
     ProductFormComponent,
-    ReactiveComponent
+    ReactiveComponent,
+    PommesdetailComponent,
+    PommeslistComponent
   ],
   imports: [
     BrowserModule,
