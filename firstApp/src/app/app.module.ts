@@ -24,6 +24,9 @@ import { ProductFormComponent } from './formulaire/product-form/product-form.com
 import { ReactiveComponent } from './formulaire/reactive/reactive.component';
 import { PommesdetailComponent } from './routage/pommesdetail/pommesdetail.component';
 import { PommeslistComponent } from './routage/pommeslist/pommeslist.component';
+import { BordureDirective } from './directives/bordure.directive';
+import { BordureComponent } from './directives/bordure/bordure.component';
+import { MycomponentComponent } from './test/mycomponent/mycomponent.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +48,10 @@ import { PommeslistComponent } from './routage/pommeslist/pommeslist.component';
     ProductFormComponent,
     ReactiveComponent,
     PommesdetailComponent,
-    PommeslistComponent
+    PommeslistComponent,
+    BordureDirective,
+    BordureComponent,
+    MycomponentComponent
   ],
   imports: [
     BrowserModule,

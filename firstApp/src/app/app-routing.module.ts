@@ -6,6 +6,7 @@ import { ListTodoComponent } from './composants/liste/list-todo/list-todo.compon
 import { ListitemComponent } from './composants/listitem/listitem.component';
 import { ViewparentComponent } from './composants/manipulationenfant/viewparent/viewparent.component';
 import { ParentComponent } from './composants/output/parent/parent.component';
+import { BordureComponent } from './directives/bordure/bordure.component';
 import { CompteurComponent } from './eventbinding/compteur/compteur.component';
 import { ProductFormComponent } from './formulaire/product-form/product-form.component';
 import { ReactiveComponent } from './formulaire/reactive/reactive.component';
@@ -27,7 +28,8 @@ const routes: Routes = [
   { path: 'formulaire/reactive', component:ReactiveComponent},
   { path: 'routing/pommes/detail/:id',component:PommesdetailComponent},
   { path: 'routing/pommes', component:PommeslistComponent},
-  { path: 'routing/pommes/:page',component:PommeslistComponent}
+  { path: 'routing/pommes/:page',component:PommeslistComponent},
+  { path: 'directives',component:BordureComponent}
 
 ];
 
